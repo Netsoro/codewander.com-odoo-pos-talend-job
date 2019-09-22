@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_lFM7wMdzEembluZGPIwtuQ" name="Odoo" id="_QxEUMMdzEembluZGPIwtuQ" label="Odoo" dataPackage="_lMTpUMdzEembluZGPIwtuQ" DatabaseType="PostgreSQL" DriverClass="org.postgresql.Driver" URL="jdbc:postgresql://localhost:5432/codewander?" dbVersionString="V9_X" Port="5432" Username="openpg" Password="QcQd7/Y4DtCGeGJeN/p1Eg==" ServerName="localhost" DatasourceName="" FileFieldName="" SID="codewander" SqlSynthax="" StringQuote="" NullChar="" DbmsId="postgres_id" ProductId="POSTGRESQL" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_lFNi0MdzEembluZGPIwtuQ" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_lHYGAMdzEembluZGPIwtuQ" tag="package filter" value=""/>
+    <taggedValue xmi:id="_lHkTQMdzEembluZGPIwtuQ" tag="Status" value=""/>
+    <taggedValue xmi:id="_lHkTQcdzEembluZGPIwtuQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_lHkTQsdzEembluZGPIwtuQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_lHkTQ8dzEembluZGPIwtuQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_lHkTRMdzEembluZGPIwtuQ" tag="Author" value=""/>
+    <taggedValue xmi:id="_lHkTRcdzEembluZGPIwtuQ" tag="otherParameter"/>
+    <taggedValue xmi:id="_lIW9cMdzEembluZGPIwtuQ" tag="DB ProductName" value="PostgreSQL"/>
+    <taggedValue xmi:id="_lIW9ccdzEembluZGPIwtuQ" tag="DB ProductVersion" value="9.5.8"/>
+    <taggedValue xmi:id="_lIW9csdzEembluZGPIwtuQ" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_lFNi0cdzEembluZGPIwtuQ" key="CONN_PARA_KEY_USERNAME" value="openpg"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_lMTpUMdzEembluZGPIwtuQ" name="codewander" dataManager="_lFM7wMdzEembluZGPIwtuQ">
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_lMU3cMdzEembluZGPIwtuQ" name="information_schema"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_lMU3ccdzEembluZGPIwtuQ" name="pg_catalog"/>
+    <ownedElement xsi:type="orgomg.cwm.resource.relational:Schema" xmi:id="_lMU3csdzEembluZGPIwtuQ" name="public"/>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>
