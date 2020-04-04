@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://www.codewander.com/extract-odoo-pos-data-using-talend/ -->
+<html class="js " lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.codewander.com/xmlrpc.php">
+<title>Extract Odoo PoS Data using Talend - CodeWander</title>
+<div class="fit-vids-style" id="fit-vids-style" style="display: none;">­<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></div><script src="./Extract Odoo PoS Data using Talend - CodeWander_files/cb=gapi.loaded_2" async=""></script><script src="./Extract Odoo PoS Data using Talend - CodeWander_files/cb=gapi.loaded_1" async=""></script><script src="./Extract Odoo PoS Data using Talend - CodeWander_files/cb=gapi(2).loaded_0" async=""></script><script async="" src="./Extract Odoo PoS Data using Talend - CodeWander_files/analytics.js"></script><script type="text/javascript">function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = 'http://www.codewander.com/wp-admin/admin-ajax.php', heateorSssCloseIconPath = 'http://www.codewander.com/wp-content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = 'http://www.codewander.com/wp-content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 1;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}</script>			<style type="text/css">
+					.heateor_sss_horizontal_sharing .heateorSssSharing{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+				.heateor_sss_horizontal_sharing .heateorSssTCBackground{
+			color:#666;
+		}
+				.heateor_sss_horizontal_sharing .heateorSssSharing:hover{
+						border-color: transparent;
+		}
+		.heateor_sss_vertical_sharing .heateorSssSharing{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+				.heateor_sss_vertical_sharing .heateorSssTCBackground{
+			color:#666;
+		}
+				.heateor_sss_vertical_sharing .heateorSssSharing:hover{
+						border-color: transparent;
+		}
+		@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}div.heateor_sss_mobile_footer{display:none;}@media screen and (max-width:783px) {div.heateor_sss_bottom_sharing{width:100%!important;left:0!important;}div.heateor_sss_bottom_sharing li{width:16.666666666667% !important;}div.heateor_sss_bottom_sharing .heateorSssSharing{width: 100% !important;}div.heateor_sss_bottom_sharing div.heateorSssTotalShareCount{font-size:1em!important;line-height:28px!important}div.heateor_sss_bottom_sharing div.heateorSssTotalShareText{font-size:.7em!important;line-height:0px!important}div.heateor_sss_mobile_footer{display:block;height:40px;}.heateor_sss_bottom_sharing{padding:0!important;display:block!important;width: auto!important;bottom:-2px!important;top: auto!important;}.heateor_sss_bottom_sharing .heateor_sss_square_count{line-height: inherit;}.heateor_sss_bottom_sharing .heateorSssSharingArrow{display:none;}.heateor_sss_bottom_sharing .heateorSssTCBackground{margin-right: 1.1em !important}}@media screen and (min-width:783px){
+.heateor_sss_whatsapp_count, .heateorSssWhatsappBackground{
+    display: none !important;
+}
+}			</style>
+			<script type="text/javascript">
+var trackScrolling=false;
+var trackScrollingPercentage=false;
+var ScrollingPercentageNumber=25;
+var stLogInterval=10*1000;
+var cutOffTime=900;
+var trackNoEvents=false;
+var trackNoMaxTime=false;
+var docTitle='Extract Odoo PoS Data using Talend';
+</script>
+<script type="text/javascript">function ctSetCookie(c_name, value, def_value){document.cookie = c_name + '=' + escape(value) + '; path=/';}ctSetCookie('ct_checkjs', '669233449', '0');</script>
+<!-- This site is optimized with the Yoast SEO plugin v12.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Extract Point of Sale data from Odoo using Talend as ETL tool">
+<link rel="canonical" href="http://www.codewander.com/extract-odoo-pos-data-using-talend/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Extract Odoo PoS Data using Talend - CodeWander">
+<meta property="og:description" content="Extract Point of Sale data from Odoo using Talend as ETL tool">
+<meta property="og:url" content="http://www.codewander.com/extract-odoo-pos-data-using-talend/">
+<meta property="og:site_name" content="CodeWander">
+<meta property="article:tag" content="data integration">
+<meta property="article:tag" content="ETL">
+<meta property="article:tag" content="odoo">
+<meta property="article:tag" content="talend">
+<meta property="article:section" content="odoo">
+<meta property="article:published_time" content="2019-09-22T16:48:11+00:00">
+<meta property="article:modified_time" content="2019-09-22T18:09:01+00:00">
+<meta property="og:updated_time" content="2019-09-22T18:09:01+00:00">
+<meta property="og:image" content="http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-data-integration.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Extract Point of Sale data from Odoo using Talend as ETL tool">
+<meta name="twitter:title" content="Extract Odoo PoS Data using Talend - CodeWander">
+<meta name="twitter:site" content="@codewander">
+<meta name="twitter:image" content="http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-data-integration.png">
+<meta name="twitter:creator" content="@codewander">
+<script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"http://www.codewander.com/#website","url":"http://www.codewander.com/","name":"CodeWander.com","publisher":{"@id":"http://www.codewander.com/#/schema/person/2072fc98a12954fe8ebe4e622ae4d875"},"potentialAction":{"@type":"SearchAction","target":"http://www.codewander.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#primaryimage","url":"http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-data-integration.png","width":1280,"height":720,"caption":"codewander.com-odoo-talend-data-integration"},{"@type":"WebPage","@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#webpage","url":"http://www.codewander.com/extract-odoo-pos-data-using-talend/","inLanguage":"en-US","name":"Extract Odoo PoS Data using Talend - CodeWander","isPartOf":{"@id":"http://www.codewander.com/#website"},"primaryImageOfPage":{"@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#primaryimage"},"datePublished":"2019-09-22T16:48:11+00:00","dateModified":"2019-09-22T18:09:01+00:00","description":"Extract Point of Sale data from Odoo using Talend as ETL tool"},{"@type":"Article","@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#article","isPartOf":{"@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#webpage"},"author":{"@id":"http://www.codewander.com/#/schema/person/0166292d46840931657b059ac050186a"},"headline":"Extract Odoo PoS Data using Talend","datePublished":"2019-09-22T16:48:11+00:00","dateModified":"2019-09-22T18:09:01+00:00","commentCount":0,"mainEntityOfPage":{"@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#webpage"},"publisher":{"@id":"http://www.codewander.com/#/schema/person/2072fc98a12954fe8ebe4e622ae4d875"},"image":{"@id":"http://www.codewander.com/extract-odoo-pos-data-using-talend/#primaryimage"},"keywords":"data integration,ETL,odoo,talend","articleSection":"odoo,Power BI,Qlik sense,Talend"},{"@type":["Person"],"@id":"http://www.codewander.com/#/schema/person/0166292d46840931657b059ac050186a","name":"codeatroost","image":{"@type":"ImageObject","@id":"http://www.codewander.com/#authorlogo","url":"http://0.gravatar.com/avatar/342b20a16d2e9a7252dac9ea697d2460?s=96&d=mm&r=g","caption":"codeatroost"},"sameAs":[]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="CodeWander » Feed" href="http://www.codewander.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="CodeWander » Comments Feed" href="http://www.codewander.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="CodeWander » Extract Odoo PoS Data using Talend Comments Feed" href="http://www.codewander.com/extract-odoo-pos-data-using-talend/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.codewander.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Extract Odoo PoS Data using Talend - CodeWander_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mh-google-fonts-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="mh-magazine-lite-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mh-font-awesome-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="heateor_sss_frontend_css-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/sassy-social-share-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="heateor_sss_sharing_default_svg-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/sassy-social-share-svg.css" type="text/css" media="all">
+<link rel="stylesheet" id="__EPYT__style-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/ytprefs.min.css" type="text/css" media="all">
+<style id="__EPYT__style-inline-css" type="text/css">
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<link rel="stylesheet" id="codecolorer-css" href="./Extract Odoo PoS Data using Talend - CodeWander_files/codecolorer.css" type="text/css" media="screen">
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/jquery.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ctPublic = {"_ajax_nonce":"55202910e1","_ajax_url":"http:\/\/www.codewander.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/apbct-public.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ctNocache = {"ajaxurl":"http:\/\/www.codewander.com\/wp-admin\/admin-ajax.php","info_flag":"","set_cookies_flag":"","blog_home":"http:\/\/www.codewander.com\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/cleantalk_nocache.min.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/scripts.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"http:\/\/www.codewander.com\/wp-admin\/admin-ajax.php","security":"c83ee13664","gallery_scrolloffset":"20","eppathtoscripts":"http:\/\/www.codewander.com\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"http:\/\/www.codewander.com\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"13.1.1","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/ytprefs.min.js"></script>
+<link rel="https://api.w.org/" href="http://www.codewander.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.codewander.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.codewander.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.2.5">
+<link rel="shortlink" href="http://www.codewander.com/?p=689">
+<link rel="alternate" type="application/json+oembed" href="http://www.codewander.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://www.codewander.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F&amp;format=xml">
+<style type="text/css">0</style><!--[if lt IE 9]>
+<script src="http://www.codewander.com/wp-content/themes/mh-magazine-lite/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #fcfcfc; }
+</style>
+	<meta name="twitter:image" content="http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-data-integration.png"><meta name="twitter:card" content="summary"><meta name="twitter:domain" content="CodeWander"><meta name="twitter:description" content="Extract Point of Sale data from Odoo using Talend as ETL tool"><meta name="twitter:title" content="Extract Odoo PoS Data using Talend - CodeWander"><meta property="og:image" content="http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-data-integration.png"><meta property="og:site_name" content="CodeWander"><meta property="og:description" content="Extract Point of Sale data from Odoo using Talend as ETL tool"><meta property="og:url" content="http://www.codewander.com/extract-odoo-pos-data-using-talend/"><meta property="og:type" content="article"><meta property="og:title" content="Extract Odoo PoS Data using Talend - CodeWander"><meta name="description" content="Extract Point of Sale data from Odoo using Talend as ETL tool"><meta name="keywords" content="odoo, talend, data integration, ETL"><meta name="title" content="Extract Odoo PoS Data using Talend - CodeWander"><link rel="icon" href="http://www.codewander.com/wp-content/uploads/2018/05/cropped-logonotag4-2-32x32.png" sizes="32x32">
+<link rel="icon" href="http://www.codewander.com/wp-content/uploads/2018/05/cropped-logonotag4-2-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="http://www.codewander.com/wp-content/uploads/2018/05/cropped-logonotag4-2-180x180.png">
+<meta name="msapplication-TileImage" content="http://www.codewander.com/wp-content/uploads/2018/05/cropped-logonotag4-2-270x270.png">
+
+<!-- BEGIN GADWP v5.3.3 Universal Analytics - https://exactmetrics.com/ -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-116414200-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END GADWP Universal Analytics -->
+<script charset="utf-8" src="./Extract Odoo PoS Data using Talend - CodeWander_files/button.93a0c25c2d2f3081c705c98c2d9dec0e.js"></script><style> .gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0}</style></head>
+<body id="mh-mobile" class="post-template-default single single-post postid-689 single-format-standard custom-background wp-custom-logo mh-right-sb" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<div class="mh-container mh-container-outer">
+<div class="mh-header-mobile-nav mh-clearfix"></div>
+<header class="mh-header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+	<div class="mh-container mh-container-inner mh-row mh-clearfix">
+		<div class="mh-custom-header mh-clearfix">
+<div class="mh-site-identity">
+<div class="mh-site-logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+<a href="http://www.codewander.com/" class="custom-logo-link" rel="home"><img width="88" height="52" src="./Extract Odoo PoS Data using Talend - CodeWander_files/logonotag4.png" class="custom-logo" alt="codewander.com" srcset="http://www.codewander.com/wp-content/uploads/2018/05/logonotag4.png 88w, http://www.codewander.com/wp-content/uploads/2018/05/logonotag4-80x47.png 80w" sizes="(max-width: 88px) 100vw, 88px"></a></div>
+</div>
+</div>
+	</div>
+	<div class="mh-main-nav-wrap"><div class="slicknav_menu"><a href="http://www.codewander.com/extract-odoo-pos-data-using-talend/#" aria-haspopup="true" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;"><span class="slicknav_menutxt">MENU</span><span class="slicknav_icon"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><nav class="slicknav_nav slicknav_hidden" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" style="display: none;" aria-hidden="true" role="menu">
+			<div class="menu-primary-location-container"><ul class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-173"><a href="http://www.codewander.com/" role="menuitem">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-176 slicknav_collapsed slicknav_parent"><a href="http://www.codewander.com/extract-odoo-pos-data-using-talend/#" role="menuitem" aria-haspopup="true" tabindex="-1" class="slicknav_item" style="outline: none;"><a href="http://www.codewander.com/category/qlik-sense/">Qlik sense</a>
+<span class="slicknav_arrow">►</span></a><ul class="sub-menu slicknav_hidden" role="menu" style="display: none;" aria-hidden="true">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-307"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-mashup/" role="menuitem" tabindex="-1">Qlik sense Mashup</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-308"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-dot-net-sdk/" role="menuitem" tabindex="-1">Qlik sense Dot Net SDK</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-272"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-extensions/" role="menuitem" tabindex="-1">Qlik sense Extensions</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-894"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-tips/" role="menuitem" tabindex="-1">Qlik sense Tips</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-442"><a href="http://www.codewander.com/category/qlik-sense/enigmajs/" role="menuitem">enigma.js</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-832"><a href="http://www.codewander.com/category/power-bi/" role="menuitem">Power BI</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="http://www.codewander.com/qlik-sense-demo/" role="menuitem">Quick Demos</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-831"><a href="http://www.codewander.com/category/wanderthoughtz/" role="menuitem">WanderThoughtz</a></li>
+</ul></div>		</nav></div>
+		<nav class="mh-navigation mh-main-nav mh-container mh-container-inner mh-clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+			<div class="menu-primary-location-container"><ul id="menu-primary-location" class="menu"><li id="menu-item-173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-173"><a href="http://www.codewander.com/">Home</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-176"><a href="http://www.codewander.com/category/qlik-sense/">Qlik sense</a>
+<ul class="sub-menu">
+	<li id="menu-item-307" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-307"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-mashup/">Qlik sense Mashup</a></li>
+	<li id="menu-item-308" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-308"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-dot-net-sdk/">Qlik sense Dot Net SDK</a></li>
+	<li id="menu-item-272" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-272"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-extensions/">Qlik sense Extensions</a></li>
+	<li id="menu-item-894" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-894"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-tips/">Qlik sense Tips</a></li>
+</ul>
+</li>
+<li id="menu-item-442" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-442"><a href="http://www.codewander.com/category/qlik-sense/enigmajs/">enigma.js</a></li>
+<li id="menu-item-832" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-832"><a href="http://www.codewander.com/category/power-bi/">Power BI</a></li>
+<li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="http://www.codewander.com/qlik-sense-demo/">Quick Demos</a></li>
+<li id="menu-item-831" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-831"><a href="http://www.codewander.com/category/wanderthoughtz/">WanderThoughtz</a></li>
+</ul></div>		</nav>
+	</div>
+</header><div class="mh-wrapper mh-clearfix">
+	<div id="main-content" class="mh-content" role="main" itemprop="mainContentOfPage"><article id="post-689" class="post-689 post type-post status-publish format-standard has-post-thumbnail hentry category-odoo category-power-bi category-qlik-sense category-talend tag-data-integration tag-etl tag-odoo tag-talend">
+	<header class="entry-header mh-clearfix"><h1 class="entry-title">Extract Odoo PoS Data using Talend</h1><p class="mh-meta entry-meta">
+<span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="http://www.codewander.com/2019/09/">September 22, 2019</a></span>
+<span class="entry-meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="http://www.codewander.com/author/codeatroost/">codeatroost</a></span>
+<span class="entry-meta-categories"><i class="fa fa-folder-open-o"></i><a href="http://www.codewander.com/category/odoo/" rel="category tag">odoo</a>, <a href="http://www.codewander.com/category/power-bi/" rel="category tag">Power BI</a>, <a href="http://www.codewander.com/category/qlik-sense/" rel="category tag">Qlik sense</a>, <a href="http://www.codewander.com/category/talend/" rel="category tag">Talend</a></span>
+<span class="entry-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-scroll" href="http://www.codewander.com/extract-odoo-pos-data-using-talend/#mh-comments">0</a></span>
+</p>
+	</header>
+		<div class="entry-content mh-clearfix">
+<figure class="entry-thumbnail">
+<img src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander.com-odoo-talend-data-integration-678x381.png" alt="codewander.com-odoo-talend-data-integration" title="codewander.com-odoo-talend-data-integration">
+</figure>
+
+<p>This post is part of the  <a href="http://www.codewander.com/odoo-dashboard-in-qlik-sense-and-power-bi-with-talend/" target="_blank" rel="noreferrer noopener" aria-label="Odoo Dashboard in Qlik Sense and Power BI  series (opens in a new tab)">Odoo Dashboard in Qlik Sense and Power BI  series</a>. It is an attempt to create a simple Odoo dashboard in Qlik Sense and Power BI using Talend as an ETL tool. In this post we will see how to extract Odoo PoS Data using Talend.</p>
+
+
+
+<p>The entire job can be downloaded from the below location. It is created using Talend 7.2 version</p>
+
+
+
+<p><a style="background-color: #81d742; padding: 14px; color: white; display: inline-block; text-align: center; text-decoration: none;" rel="noopener noreferrer" title="" href="http://www.codewander.com/download/?download_link=https://github.com/CodeAtRoost/codewander.com-odoo-pos-talend-job&amp;download_title=CodeWander%20Odoo%20PoS%20Talend%20Job-%20GitHub" target="_blank">Download Odoo Pos Talend Job</a></p>
+
+
+
+<h2>Entities and Tables</h2>
+
+
+
+<p>There are three entities in the Point of Sale (PoS) context. These three entities are stored in multiple tables. Following are the entities and the table details.</p>
+
+
+
+<ol><li>Entity: Order<ul><li>Table: pos_order</li></ul></li><li>Order line<ul><li>Tables: pos_order_line</li></ul></li><li>Product<ul><li>Tables:<ol><li>product_product</li><li>product_template</li><li>uom_uom</li><li>uom_category</li><li>product_category</li></ol></li></ul></li></ol>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter is-resized"><img src="./Extract Odoo PoS Data using Talend - CodeWander_files/Odoo-PoS-Tables-and-Entities-1024x601.png" alt="Odoo-PoS-Tables-and-Entities" class="wp-image-682" width="517" height="303" srcset="http://www.codewander.com/wp-content/uploads/2019/09/Odoo-PoS-Tables-and-Entities-1024x601.png 1024w, http://www.codewander.com/wp-content/uploads/2019/09/Odoo-PoS-Tables-and-Entities-300x176.png 300w, http://www.codewander.com/wp-content/uploads/2019/09/Odoo-PoS-Tables-and-Entities-768x451.png 768w, http://www.codewander.com/wp-content/uploads/2019/09/Odoo-PoS-Tables-and-Entities.png 1250w" sizes="(max-width: 517px) 100vw, 517px"><figcaption>Odoo PoS Entities and Tables</figcaption></figure></div>
+
+
+
+<h2>Extract Data to flat files</h2>
+
+
+
+<p>Now that we identified the required tables and the entities, we will now generate three output files one for each of the entity. </p>
+
+
+
+<p>The talend job does the following activities</p>
+
+
+
+<ul><li>Create a common database connection using the postgreSQL connector. </li></ul>
+
+
+
+<ul><li>Extract Order using the following query and output it to the flat file orders.csv</li></ul>
+
+
+
+<pre class="wp-block-preformatted">select * from pos_order</pre>
+
+
+
+<ul><li>Extract order lines using the following query and output it to flat file orderlines.csv</li></ul>
+
+
+
+<pre class="wp-block-preformatted">select 
+id order_line_id, company_id, name order_line_name, 
+notice order_line_notice, product_id, price_unit order_line_price_unit, 
+qty order_line_qty,price_subtotal order_line_price_subtotal, price_subtotal_incl order_line_price_subtotal_incl, discount order_line_discount,order_id, create_uid order_line_create_uid, create_date order_line_create_date, write_uid order_line_write_uid, write_date order_line_write_date
+from 
+pos_order_line</pre>
+
+
+
+<ul><li>Get Product details using the following query from two tables product_product and product_template</li></ul>
+
+
+
+<pre class="wp-block-preformatted">select product_product.id product_id,  product_template.name product_name,
+product_template.type product_type,product_template.categ_id product_category_id,
+product_template.list_price product_list_price,product_template.uom_id product_uom_id,
+product_template.pos_categ_id product_pos_categ_id
+from product_product left join product_template 
+on product_product.product_tmpl_id =  product_template.id</pre>
+
+
+
+<ul><li>Merge UoM details using the below query from two tables uom_uom and uom_category</li></ul>
+
+
+
+<pre class="wp-block-preformatted">select uom_uom.id product_uom_id, uom_uom.name product_uom_name,uom_category.name product_uom_category_name  from uom_uom left join uom_category on uom_uom.category_id = uom_category.id</pre>
+
+
+
+<ul><li>Extract product category details using the following query from product_category table</li></ul>
+
+
+
+<pre class="wp-block-preformatted">SELECT id product_category_id, name product_category_name, complete_name product_category_complete_name
+FROM public.product_category</pre>
+
+
+
+<ul><li>Join Product, UoM and Product Category details using tJoin to create one single output file products.csv</li></ul>
+
+
+
+<p>The reason for keeping the product separate rather than merging with order or order lines is that these products can later be linked with inventory entities. If we link it to Orders then we may not be able to get the list of products that are not sold.</p>
+
+
+
+<figure class="wp-block-image"><img src="./Extract Odoo PoS Data using Talend - CodeWander_files/Talend-Job-for-Odoo-PoS.png" alt="Odoo PoS Dashoboard Talend Integration Job" class="wp-image-684" srcset="http://www.codewander.com/wp-content/uploads/2019/09/Talend-Job-for-Odoo-PoS.png 897w, http://www.codewander.com/wp-content/uploads/2019/09/Talend-Job-for-Odoo-PoS-300x193.png 300w, http://www.codewander.com/wp-content/uploads/2019/09/Talend-Job-for-Odoo-PoS-768x493.png 768w" sizes="(max-width: 897px) 100vw, 897px"><figcaption>Odoo PoS Dashoboard Talend Integration Job</figcaption></figure>
+
+
+
+<p>Once the job runs successfully, we will have the following three files.</p>
+
+
+
+<ul><li><a href="https://github.com/CodeAtRoost/codewander.com-odoo-pos-talend-job/blob/master/orders.csv">orders.csv</a></li><li><a href="https://github.com/CodeAtRoost/codewander.com-odoo-pos-talend-job/blob/master/orderlines.csv">orderlines.csv</a></li><li><a href="https://github.com/CodeAtRoost/codewander.com-odoo-pos-talend-job/blob/master/products.csv">products.csv</a></li></ul>
+
+
+
+<p>As the data is ready now, we can start building dashboard in <a rel="noreferrer noopener" aria-label="Qlik sense (opens in a new tab)" href="https://www.qlik.com/us/try-or-buy/download-qlik-sense" target="_blank">Qlik sense</a>, <a href="https://www.microsoft.com/en-us/download/details.aspx?id=45331" target="_blank" rel="noreferrer noopener" aria-label="Power BI (opens in a new tab)">Power BI</a> or any other tool of your choice.</p>
+<div class="heateor_sss_sharing_container heateor_sss_vertical_sharing heateor_sss_bottom_sharing" style="width:44px;left: -10px;top: 150px;-webkit-box-shadow:none;box-shadow:none;" heateor-sss-data-href="http://www.codewander.com/extract-odoo-pos-data-using-talend/"><ul class="heateor_sss_sharing_ul"><li class=""><i style="width:40px;height:40px;margin:0;" alt="Email" title="Email" class="heateorSssSharing heateorSssEmailBackground" onclick="window.location.href = &#39;mailto:?subject=&#39; + decodeURIComponent(&#39;Extract%20Odoo%20PoS%20Data%20using%20Talend&#39; ).replace(&#39;&amp;&#39;, &#39;%26&#39;) + &#39;&amp;body=&#39; + decodeURIComponent(&#39;http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F&#39; )"><ss style="display:block" class="heateorSssSharingSvg heateorSssEmailSvg"></ss></i></li><li class=""><i style="width:40px;height:40px;margin:0;" alt="Twitter" title="Twitter" class="heateorSssSharing heateorSssTwitterBackground" onclick="heateorSssPopup(&quot;http://twitter.com/intent/tweet?text=Extract%20Odoo%20PoS%20Data%20using%20Talend&amp;url=http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F&quot;)"><ss style="display:block;" class="heateorSssSharingSvg heateorSssTwitterSvg"></ss></i></li><li class=""><i style="width:40px;height:40px;margin:0;" alt="Linkedin" title="Linkedin" class="heateorSssSharing heateorSssLinkedinBackground" onclick="heateorSssPopup(&quot;http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F&amp;title=Extract%20Odoo%20PoS%20Data%20using%20Talend&quot;)"><ss style="display:block;" class="heateorSssSharingSvg heateorSssLinkedinSvg"></ss></i></li><li class=""><i style="width:40px;height:40px;margin:0;" alt="Google plus" title="Google plus" class="heateorSssSharing heateorSssGoogleplusBackground" onclick="heateorSssPopup(&quot;https://plus.google.com/share?url=http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F&quot;)"><ss style="display:block;" class="heateorSssSharingSvg heateorSssGoogleplusSvg"></ss></i></li><li class=""><i style="width:40px;height:40px;margin:0;" alt="Flipboard" title="Flipboard" class="heateorSssSharing heateorSssFlipboardBackground" onclick="heateorSssPopup(&quot;https://share.flipboard.com/bookmarklet/popout?v=2&amp;url=http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F&amp;title=Extract%20Odoo%20PoS%20Data%20using%20Talend&quot;)"><ss style="display:block;" class="heateorSssSharingSvg heateorSssFlipboardSvg"></ss></i></li><li class=""><i style="width:40px;height:40px;margin:0;" alt="Whatsapp" title="Whatsapp" class="heateorSssSharing heateorSssWhatsappBackground"><a href="https://api.whatsapp.com/send?text=Extract%20Odoo%20PoS%20Data%20using%20Talend%20http%3A%2F%2Fwww.codewander.com%2Fextract-odoo-pos-data-using-talend%2F" rel="nofollow"><ss style="display:block" class="heateorSssSharingSvg heateorSssWhatsappSvg"></ss></a></i></li></ul><div class="heateorSssClear"></div><div title="Hide" style="float:left" onclick="heateorSssHideSharing(this, &#39;heateorSssPullOut&#39;, &#39;heateorSssPushIn&#39;,&#39;Left&#39;, &#39;left&#39;)" class="heateorSssSharingArrow heateorSssPullOut"></div></div>	</div><div class="entry-tags mh-clearfix"><i class="fa fa-tag"></i><ul><li><a href="http://www.codewander.com/tag/data-integration/" rel="tag">data integration</a></li><li><a href="http://www.codewander.com/tag/etl/" rel="tag">ETL</a></li><li><a href="http://www.codewander.com/tag/odoo/" rel="tag">odoo</a></li><li><a href="http://www.codewander.com/tag/talend/" rel="tag">talend</a></li></ul></div></article><nav class="mh-post-nav mh-row mh-clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+<div class="mh-col-1-2 mh-post-nav-item mh-post-nav-prev">
+<a href="http://www.codewander.com/odoo-dashboard-in-qlik-sense-and-power-bi-with-talend/" rel="prev"><img width="80" height="60" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander.com-odoo-talend-power-bi-qlik-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="codewander.com-odoo-talend-power-bi-qlik" srcset="http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-power-bi-qlik-80x60.png 80w, http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-power-bi-qlik-678x509.png 678w, http://www.codewander.com/wp-content/uploads/2019/09/codewander.com-odoo-talend-power-bi-qlik-326x245.png 326w" sizes="(max-width: 80px) 100vw, 80px"><span>Previous</span><p>Odoo Power Bi, Qlik Sense with Talend</p></a></div>
+<div class="mh-col-1-2 mh-post-nav-item mh-post-nav-next">
+<a href="http://www.codewander.com/qlik-sense-enigma-js-example-create-sheet-server-side/" rel="next"><span>Next</span><p>Qlik Sense Enigma JS Example Create Sheet server side</p></a></div>
+</nav>
+		<h4 id="mh-comments" class="mh-widget-title mh-comment-form-title">
+			<span class="mh-widget-title-inner">
+				Be the first to comment			</span>
+		</h4>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.codewander.com/extract-odoo-pos-data-using-talend/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://www.codewander.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes">Your email address will not be published.</p><p class="comment-form-comment"><label for="comment">Comment</label><br><textarea autocomplete="nope" id="comment" name="d0a90f0db8" cols="45" rows="5" aria-required="true"></textarea><textarea id="a50c4b2bdafba1cf4ac7eeb503dce507" aria-hidden="true" name="comment" autocomplete="nope" style="padding:0;clip:rect(1px, 1px, 1px, 1px);position:absolute !important;white-space:nowrap;height:1px;width:1px;overflow:hidden;" tabindex="-1"></textarea><script type="text/javascript">document.getElementById("comment").setAttribute( "id", "a50c4b2bdafba1cf4ac7eeb503dce507" );document.getElementById("d0a90f0db8").setAttribute( "id", "comment" );</script></p><p class="comment-form-author"><label for="author">Name </label><span class="required">*</span><br><input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">Email </label><span class="required">*</span><br><input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label><br><input id="url" name="url" type="text" value="" size="30"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="689" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><input type="hidden" id="ct_checkjs_5b69b9cb83065d403869739ae7f0995e" name="ct_checkjs" value="669233449"><script type="text/javascript">setTimeout(function(){apbct_sendAJAXRequest({action: 'apbct_js_keys__get'},{callback: apbct_js_keys__set_input_value, input_name: 'ct_checkjs_5b69b9cb83065d403869739ae7f0995e'});}, 1000);</script>			</form>
+			</div><!-- #respond -->
+		</div>
+	<aside class="mh-widget-col-1 mh-sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"><div id="widget_tptn_pop-2" class="mh-widget tptn_posts_list_widget"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Trending</span></h4><div class="tptn_posts_daily  tptn_posts_widget tptn_posts_widget2"><ul><li><a href="http://www.codewander.com/qlik-sense-mashup-apply-filters-across-two-or-more-apps/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Qliksense-selection-on-multiple-apps-mashup-bi-analytics-150x150.gif" class="tptn_thumb tptn_featured" alt="Qlik sense mashup - Apply filters across two or more apps" title="Qlik sense mashup - Apply filters across two or more apps"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/qlik-sense-mashup-apply-filters-across-two-or-more-apps/" class="tptn_link"><span class="tptn_title">Qlik sense mashup – Apply filters across two…</span></a></span></li><li><a href="http://www.codewander.com/qlik-extension-bubble-chart-animated/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Qliksense-Extension-Animated-Bubble-Chart-Details-150x150.png" class="tptn_thumb tptn_featured" alt="Qlik sense Extension Bubble Chart Animated" title="Qlik sense Extension Bubble Chart Animated" srcset="http://www.codewander.com/wp-content/uploads/2018/05/Qliksense-Extension-Animated-Bubble-Chart-Details-150x150.png 150w, http://www.codewander.com/wp-content/uploads/2018/05/Qliksense-Extension-Animated-Bubble-Chart-Details-300x300.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/qlik-extension-bubble-chart-animated/" class="tptn_link"><span class="tptn_title">Qlik sense Extension Bubble Chart Animated</span></a></span></li><li><a href="http://www.codewander.com/qlik-sense-extension-responsive-navigation-menu/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-150x150.png" class="tptn_thumb tptn_featured" alt="Qlik sense extension - Responsive Navigation Menu" title="Qlik sense extension - Responsive Navigation Menu" srcset="http://www.codewander.com/wp-content/uploads/2019/03/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-150x150.png 150w, http://www.codewander.com/wp-content/uploads/2019/03/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-250x250.png 250w" sizes="(max-width: 50px) 100vw, 50px"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/qlik-sense-extension-responsive-navigation-menu/" class="tptn_link"><span class="tptn_title">Qlik sense extension – Responsive Navigation Menu</span></a></span></li><li><a href="http://www.codewander.com/qlik-sense-mashup-export-data-to-excel/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Qlik-sense-mashup-export-data-to-excel-150x150.png" class="tptn_thumb tptn_featured" alt="Qlik sense mashup export data to excel" title="Qlik sense mashup export data to excel" srcset="http://www.codewander.com/wp-content/uploads/2018/06/Qlik-sense-mashup-export-data-to-excel-150x150.png 150w, http://www.codewander.com/wp-content/uploads/2018/06/Qlik-sense-mashup-export-data-to-excel-300x300.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/qlik-sense-mashup-export-data-to-excel/" class="tptn_link"><span class="tptn_title">Qlik sense mashup export data to excel</span></a></span></li><li><a href="http://www.codewander.com/get-list-dimensons-measures-variables-sheets-details-enigma-js-nodejs/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander-enigmajs-get-app-objects-150x150.png" class="tptn_thumb tptn_featured" alt="Qlik sense enigma js example - Get App Objects List" title="Qlik sense enigma js example - Get App Objects List" srcset="http://www.codewander.com/wp-content/uploads/2018/08/codewander-enigmajs-get-app-objects-150x150.png 150w, http://www.codewander.com/wp-content/uploads/2018/08/codewander-enigmajs-get-app-objects-250x250.png 250w" sizes="(max-width: 50px) 100vw, 50px"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/get-list-dimensons-measures-variables-sheets-details-enigma-js-nodejs/" class="tptn_link"><span class="tptn_title">Qlik sense enigma js example – Get App Objects List</span></a></span></li><li><a href="http://www.codewander.com/qlik-sense-enigmajs-create-open-session-list-apps/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander.com-enigma.js-open-session-list-apps-2-150x150.png" class="tptn_thumb tptn_featured" alt="Qlik sense Enigmajs Create, Open session and list apps" title="Qlik sense Enigmajs Create, Open session and list apps" srcset="http://www.codewander.com/wp-content/uploads/2018/07/codewander.com-enigma.js-open-session-list-apps-2-150x150.png 150w, http://www.codewander.com/wp-content/uploads/2018/07/codewander.com-enigma.js-open-session-list-apps-2-250x250.png 250w" sizes="(max-width: 50px) 100vw, 50px"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/qlik-sense-enigmajs-create-open-session-list-apps/" class="tptn_link"><span class="tptn_title">Qlik sense Enigmajs Create, Open session and list apps</span></a></span></li><li><a href="http://www.codewander.com/qlik-sense-extension-statistics-summary/" class="tptn_link"><img width="50" height="50" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Qlik-sense-extension-statistics-summary-150x150.png" class="tptn_thumb tptn_featured" alt="Qlik sense extension - Statistics Summary" title="Qlik sense extension - Statistics Summary" srcset="http://www.codewander.com/wp-content/uploads/2018/06/Qlik-sense-extension-statistics-summary-150x150.png 150w, http://www.codewander.com/wp-content/uploads/2018/06/Qlik-sense-extension-statistics-summary-300x300.png 300w" sizes="(max-width: 50px) 100vw, 50px"></a><span class="tptn_after_thumb"><a href="http://www.codewander.com/qlik-sense-extension-statistics-summary/" class="tptn_link"><span class="tptn_title">Qlik sense extension – Statistics Summary</span></a></span></li></ul><div class="tptn_clear"></div></div></div><div id="mh_custom_posts-4" class="mh-widget mh_custom_posts"><h4 class="mh-widget-title"><span class="mh-widget-title-inner"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-extensions/" class="mh-widget-title-link">More Qlik Sense Extensions</a></span></h4>			<ul class="mh-custom-posts-widget mh-clearfix">					<li class="post-1018 mh-custom-posts-item mh-custom-posts-small mh-clearfix">
+						<figure class="mh-custom-posts-thumb">
+							<a href="http://www.codewander.com/qlik-sense-extension-multi-series-scatter-plot/" title="Qlik sense extension multi-series scatter plot"><img width="80" height="60" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander-qlik-sense-extension-scatter-plot-multi-series-feature-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="codewander-qlik-sense-extension-scatter-plot-multi-series-feature" srcset="http://www.codewander.com/wp-content/uploads/2020/02/codewander-qlik-sense-extension-scatter-plot-multi-series-feature-80x60.png 80w, http://www.codewander.com/wp-content/uploads/2020/02/codewander-qlik-sense-extension-scatter-plot-multi-series-feature-678x509.png 678w, http://www.codewander.com/wp-content/uploads/2020/02/codewander-qlik-sense-extension-scatter-plot-multi-series-feature-326x245.png 326w" sizes="(max-width: 80px) 100vw, 80px">							</a>
+						</figure>
+						<div class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://www.codewander.com/qlik-sense-extension-multi-series-scatter-plot/" title="Qlik sense extension multi-series scatter plot">
+									Qlik sense extension multi-series scatter plot								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>February 6, 2020</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://www.codewander.com/qlik-sense-extension-multi-series-scatter-plot/#mh-comments">0</a></span>
+							</div>
+						</div>
+					</li>					<li class="post-622 mh-custom-posts-item mh-custom-posts-small mh-clearfix">
+						<figure class="mh-custom-posts-thumb">
+							<a href="http://www.codewander.com/qlik-sense-extension-geo-analytics-leaflet-mapbox/" title="Qlik sense Extension Geo Analytics Leaflet Mapbox"><img width="80" height="60" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Qlik-sense-extension-Geo-Maps-Leaflet-Mapbox-1-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="Qlik sense extension -Geo Maps - Leaflet Mapbox" srcset="http://www.codewander.com/wp-content/uploads/2019/08/Qlik-sense-extension-Geo-Maps-Leaflet-Mapbox-1-80x60.png 80w, http://www.codewander.com/wp-content/uploads/2019/08/Qlik-sense-extension-Geo-Maps-Leaflet-Mapbox-1-678x509.png 678w, http://www.codewander.com/wp-content/uploads/2019/08/Qlik-sense-extension-Geo-Maps-Leaflet-Mapbox-1-326x245.png 326w" sizes="(max-width: 80px) 100vw, 80px">							</a>
+						</figure>
+						<div class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://www.codewander.com/qlik-sense-extension-geo-analytics-leaflet-mapbox/" title="Qlik sense Extension Geo Analytics Leaflet Mapbox">
+									Qlik sense Extension Geo Analytics Leaflet Mapbox								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>August 25, 2019</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://www.codewander.com/qlik-sense-extension-geo-analytics-leaflet-mapbox/#mh-comments">0</a></span>
+							</div>
+						</div>
+					</li>					<li class="post-611 mh-custom-posts-item mh-custom-posts-small mh-clearfix">
+						<figure class="mh-custom-posts-thumb">
+							<a href="http://www.codewander.com/qlik-sense-extension-responsive-navigation-menu/" title="Qlik sense extension – Responsive Navigation Menu"><img width="80" height="60" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="codewander-responsive-navigation-menu-qlik-sense-extensions-feature1" srcset="http://www.codewander.com/wp-content/uploads/2019/03/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-80x60.png 80w, http://www.codewander.com/wp-content/uploads/2019/03/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-678x509.png 678w, http://www.codewander.com/wp-content/uploads/2019/03/codewander-responsive-navigation-menu-qlik-sense-extensions-feature1-326x245.png 326w" sizes="(max-width: 80px) 100vw, 80px">							</a>
+						</figure>
+						<div class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://www.codewander.com/qlik-sense-extension-responsive-navigation-menu/" title="Qlik sense extension – Responsive Navigation Menu">
+									Qlik sense extension – Responsive Navigation Menu								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>March 22, 2019</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://www.codewander.com/qlik-sense-extension-responsive-navigation-menu/#mh-comments">4</a></span>
+							</div>
+						</div>
+					</li>					<li class="post-578 mh-custom-posts-item mh-custom-posts-small mh-clearfix">
+						<figure class="mh-custom-posts-thumb">
+							<a href="http://www.codewander.com/qlik-sense-extension-d3-k-means-cluster/" title="Qlik sense extension D3 K Means Cluster"><img width="80" height="60" src="./Extract Odoo PoS Data using Talend - CodeWander_files/codewander-qlik-sense-extension-d3-k-means-cluster-featured-image-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="codewander-qlik-sense-extension-d3-k-means-cluster-featured-image" srcset="http://www.codewander.com/wp-content/uploads/2018/08/codewander-qlik-sense-extension-d3-k-means-cluster-featured-image-80x60.png 80w, http://www.codewander.com/wp-content/uploads/2018/08/codewander-qlik-sense-extension-d3-k-means-cluster-featured-image-678x509.png 678w, http://www.codewander.com/wp-content/uploads/2018/08/codewander-qlik-sense-extension-d3-k-means-cluster-featured-image-326x245.png 326w" sizes="(max-width: 80px) 100vw, 80px">							</a>
+						</figure>
+						<div class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://www.codewander.com/qlik-sense-extension-d3-k-means-cluster/" title="Qlik sense extension D3 K Means Cluster">
+									Qlik sense extension D3 K Means Cluster								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>August 8, 2018</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://www.codewander.com/qlik-sense-extension-d3-k-means-cluster/#mh-comments">5</a></span>
+							</div>
+						</div>
+					</li>					<li class="post-342 mh-custom-posts-item mh-custom-posts-small mh-clearfix">
+						<figure class="mh-custom-posts-thumb">
+							<a href="http://www.codewander.com/qlik-sense-extension-d3-scatterplot-matrix/" title="Qlik sense extension D3 Scatterplot matrix"><img width="62" height="60" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Codewander-qlik-sense-extension-d3-scatterplot-matix.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="Codewander-qlik-sense-extension-d3-scatterplot-matix" srcset="http://www.codewander.com/wp-content/uploads/2018/07/Codewander-qlik-sense-extension-d3-scatterplot-matix.png 548w, http://www.codewander.com/wp-content/uploads/2018/07/Codewander-qlik-sense-extension-d3-scatterplot-matix-300x289.png 300w, http://www.codewander.com/wp-content/uploads/2018/07/Codewander-qlik-sense-extension-d3-scatterplot-matix-80x77.png 80w" sizes="(max-width: 62px) 100vw, 62px">							</a>
+						</figure>
+						<div class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://www.codewander.com/qlik-sense-extension-d3-scatterplot-matrix/" title="Qlik sense extension D3 Scatterplot matrix">
+									Qlik sense extension D3 Scatterplot matrix								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>July 9, 2018</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://www.codewander.com/qlik-sense-extension-d3-scatterplot-matrix/#mh-comments">0</a></span>
+							</div>
+						</div>
+					</li>        	</ul></div><div id="text-7" class="mh-widget widget_text"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Subscribe to your email</span></h4>			<div class="textwidget"><form style="border: 1px solid #ccc; padding: 3px; text-align: center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow">Enter your email address:<p></p>
+<p><input style="width: 140px;" name="email" type="text"></p>
+<p><input name="uri" type="hidden" value="Codewander"><input name="loc" type="hidden" value="en_US"><input type="submit" value="Subscribe"></p>
+<p>Delivered by <a href="https://feedburner.google.com/" target="_blank" rel="noopener noreferrer">FeedBurner</a></p>
+</form>
+<p><a href="http://feeds.feedburner.com/Codewander"><img style="float:right;border: 0;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/Codewander" alt="" width="88" height="26"></a></p>
+</div>
+		</div><div id="custom_html-2" class="widget_text mh-widget widget_custom_html"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Other channels</span></h4><div class="textwidget custom-html-widget"><a href="http://feeds.feedburner.com/Codewander" target="_blank" rel="noopener noreferrer">
+<img src="./Extract Odoo PoS Data using Talend - CodeWander_files/RSS_Feed_Icon38x38.png" style="border:0px solid black;max-width:100%;" title="RSS Feed" alt="CodeWander.com RSS">
+</a>
+
+
+
+
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 81px; height: 28px;" title="Twitter Follow Button" src="./Extract Odoo PoS Data using Talend - CodeWander_files/follow_button.d0f13be8321eb432fba28cfc1c3351b1.en.html" data-screen-name="codewander"></iframe><script async="" src="./Extract Odoo PoS Data using Talend - CodeWander_files/widgets.js" charset="utf-8"></script>
+
+<script src="./Extract Odoo PoS Data using Talend - CodeWander_files/platform.js" gapi_processed="true"></script>
+
+<div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 109px; height: 24px;"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 109px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1586022687664" name="I0_1586022687664" src="./Extract Odoo PoS Data using Talend - CodeWander_files/subscribe_embed.html" data-gapiattached="true"></iframe></div></div></div><div id="categories-2" class="mh-widget widget_categories"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Categories</span></h4>		<ul>
+				<li class="cat-item cat-item-18"><a href="http://www.codewander.com/category/business-intelligence/">Business Intelligence</a>
+</li>
+	<li class="cat-item cat-item-28"><a href="http://www.codewander.com/category/qlik-sense/enigmajs/">enigma.js</a>
+</li>
+	<li class="cat-item cat-item-37"><a href="http://www.codewander.com/category/geoanalytics/">GeoAnalytics</a>
+</li>
+	<li class="cat-item cat-item-54"><a href="http://www.codewander.com/category/makeover-monday/">Makeover Monday</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="http://www.codewander.com/category/qlik-sense/native-components/">native components</a>
+</li>
+	<li class="cat-item cat-item-45"><a href="http://www.codewander.com/category/odoo/">odoo</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="http://www.codewander.com/category/power-bi/">Power BI</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.codewander.com/category/qlik-sense/">Qlik sense</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-dot-net-sdk/">Qlik sense Dot Net SDK</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-extensions/">Qlik sense Extensions</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-mashup/">Qlik sense Mashup</a>
+</li>
+	<li class="cat-item cat-item-50"><a href="http://www.codewander.com/category/qlik-sense/qlik-sense-tips/">Qlik sense Tips</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://www.codewander.com/category/solution-architecture/">Solution Architecture</a>
+</li>
+	<li class="cat-item cat-item-53"><a href="http://www.codewander.com/category/tableau/">Tableau</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="http://www.codewander.com/category/talend/">Talend</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://www.codewander.com/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-48"><a href="http://www.codewander.com/category/wanderthoughtz/">WanderThoughtz</a>
+</li>
+		</ul>
+			</div><div id="tag_cloud-2" class="mh-widget widget_tag_cloud"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Tags</span></h4><div class="tagcloud"><a href="http://www.codewander.com/tag/analytics/" class="tag-cloud-link tag-link-11 tag-link-position-1" style="font-size: 12px;">analytics</a>
+<a href="http://www.codewander.com/tag/api/" class="tag-cloud-link tag-link-20 tag-link-position-2" style="font-size: 12px;">API</a>
+<a href="http://www.codewander.com/tag/bi/" class="tag-cloud-link tag-link-13 tag-link-position-3" style="font-size: 12px;">bi</a>
+<a href="http://www.codewander.com/tag/business-inteligence/" class="tag-cloud-link tag-link-12 tag-link-position-4" style="font-size: 12px;">business inteligence</a>
+<a href="http://www.codewander.com/tag/business-intelligence/" class="tag-cloud-link tag-link-14 tag-link-position-5" style="font-size: 12px;">business intelligence</a>
+<a href="http://www.codewander.com/tag/d3/" class="tag-cloud-link tag-link-27 tag-link-position-6" style="font-size: 12px;">D3</a>
+<a href="http://www.codewander.com/tag/data-integration/" class="tag-cloud-link tag-link-46 tag-link-position-7" style="font-size: 12px;">data integration</a>
+<a href="http://www.codewander.com/tag/dot-net-sdk/" class="tag-cloud-link tag-link-16 tag-link-position-8" style="font-size: 12px;">Dot Net SDK</a>
+<a href="http://www.codewander.com/tag/enigma-js/" class="tag-cloud-link tag-link-34 tag-link-position-9" style="font-size: 12px;">enigma.js</a>
+<a href="http://www.codewander.com/tag/enigmajs/" class="tag-cloud-link tag-link-29 tag-link-position-10" style="font-size: 12px;">enigmajs</a>
+<a href="http://www.codewander.com/tag/etl/" class="tag-cloud-link tag-link-47 tag-link-position-11" style="font-size: 12px;">ETL</a>
+<a href="http://www.codewander.com/tag/expressjs/" class="tag-cloud-link tag-link-32 tag-link-position-12" style="font-size: 12px;">expressjs</a>
+<a href="http://www.codewander.com/tag/geo-analytics/" class="tag-cloud-link tag-link-38 tag-link-position-13" style="font-size: 12px;">geo analytics</a>
+<a href="http://www.codewander.com/tag/k-means-clustering/" class="tag-cloud-link tag-link-35 tag-link-position-14" style="font-size: 12px;">k means clustering</a>
+<a href="http://www.codewander.com/tag/leaflet/" class="tag-cloud-link tag-link-39 tag-link-position-15" style="font-size: 12px;">leaflet</a>
+<a href="http://www.codewander.com/tag/makeover-monday/" class="tag-cloud-link tag-link-56 tag-link-position-16" style="font-size: 12px;">Makeover Monday</a>
+<a href="http://www.codewander.com/tag/mapbox/" class="tag-cloud-link tag-link-40 tag-link-position-17" style="font-size: 12px;">mapbox</a>
+<a href="http://www.codewander.com/tag/maps/" class="tag-cloud-link tag-link-41 tag-link-position-18" style="font-size: 12px;">maps</a>
+<a href="http://www.codewander.com/tag/mashup/" class="tag-cloud-link tag-link-9 tag-link-position-19" style="font-size: 12px;">mashup</a>
+<a href="http://www.codewander.com/tag/navigation/" class="tag-cloud-link tag-link-36 tag-link-position-20" style="font-size: 12px;">navigation</a>
+<a href="http://www.codewander.com/tag/nodejs/" class="tag-cloud-link tag-link-31 tag-link-position-21" style="font-size: 12px;">nodejs</a>
+<a href="http://www.codewander.com/tag/odoo/" class="tag-cloud-link tag-link-44 tag-link-position-22" style="font-size: 12px;">odoo</a>
+<a href="http://www.codewander.com/tag/opencart/" class="tag-cloud-link tag-link-25 tag-link-position-23" style="font-size: 12px;">Opencart</a>
+<a href="http://www.codewander.com/tag/plotly/" class="tag-cloud-link tag-link-58 tag-link-position-24" style="font-size: 12px;">plotly</a>
+<a href="http://www.codewander.com/tag/power-bi/" class="tag-cloud-link tag-link-24 tag-link-position-25" style="font-size: 12px;">Power BI</a>
+<a href="http://www.codewander.com/tag/qlik/" class="tag-cloud-link tag-link-7 tag-link-position-26" style="font-size: 12px;">qlik</a>
+<a href="http://www.codewander.com/tag/qlik-api/" class="tag-cloud-link tag-link-8 tag-link-position-27" style="font-size: 12px;">qlik-api</a>
+<a href="http://www.codewander.com/tag/qlik-sense/" class="tag-cloud-link tag-link-6 tag-link-position-28" style="font-size: 12px;">Qlik sense</a>
+<a href="http://www.codewander.com/tag/qlik-sense-extensions/" class="tag-cloud-link tag-link-26 tag-link-position-29" style="font-size: 12px;">Qlik sense Extensions</a>
+<a href="http://www.codewander.com/tag/qlik-sense-tips/" class="tag-cloud-link tag-link-51 tag-link-position-30" style="font-size: 12px;">Qlik sense tips</a>
+<a href="http://www.codewander.com/tag/reactjs/" class="tag-cloud-link tag-link-30 tag-link-position-31" style="font-size: 12px;">reactjs</a>
+<a href="http://www.codewander.com/tag/scatter-plot/" class="tag-cloud-link tag-link-57 tag-link-position-32" style="font-size: 12px;">scatter plot</a>
+<a href="http://www.codewander.com/tag/solution-architecture/" class="tag-cloud-link tag-link-19 tag-link-position-33" style="font-size: 12px;">solution architecture</a>
+<a href="http://www.codewander.com/tag/tableau/" class="tag-cloud-link tag-link-55 tag-link-position-34" style="font-size: 12px;">Tableau</a>
+<a href="http://www.codewander.com/tag/talend/" class="tag-cloud-link tag-link-43 tag-link-position-35" style="font-size: 12px;">talend</a>
+<a href="http://www.codewander.com/tag/visualization/" class="tag-cloud-link tag-link-10 tag-link-position-36" style="font-size: 12px;">visualization</a>
+<a href="http://www.codewander.com/tag/wanderthoughtz/" class="tag-cloud-link tag-link-49 tag-link-position-37" style="font-size: 12px;">wanderthoughtz</a>
+<a href="http://www.codewander.com/tag/what-if/" class="tag-cloud-link tag-link-52 tag-link-position-38" style="font-size: 12px;">What-if</a></div>
+</div></aside></div>
+<footer class="mh-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+<div class="mh-container mh-container-inner mh-footer-widgets mh-row mh-clearfix">
+<div class="mh-col-1-3 mh-widget-col-1 mh-footer-3-cols  mh-footer-area mh-footer-1">
+<div id="text-8" class="mh-footer-widget widget_text"><h6 class="mh-widget-title mh-footer-widget-title"><span class="mh-widget-title-inner mh-footer-widget-title-inner">Subscribe to your email</span></h6>			<div class="textwidget"><form style="border: 1px solid #ccc; padding: 3px; text-align: center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow">Enter your email address:<p></p>
+<p><input style="width: 140px;" name="email" type="text"></p>
+<p><input name="uri" type="hidden" value="Codewander"><input name="loc" type="hidden" value="en_US"><input type="submit" value="Subscribe"></p>
+<p>Delivered by <a href="https://feedburner.google.com/" target="_blank" rel="noopener noreferrer">FeedBurner</a></p>
+</form>
+</div>
+		</div></div>
+<div class="mh-col-1-3 mh-widget-col-1 mh-footer-3-cols  mh-footer-area mh-footer-2">
+<div id="custom_html-3" class="widget_text mh-footer-widget widget_custom_html"><h6 class="mh-widget-title mh-footer-widget-title"><span class="mh-widget-title-inner mh-footer-widget-title-inner">Other Channels</span></h6><div class="textwidget custom-html-widget"><a href="http://feeds.feedburner.com/Codewander" target="_blank" rel="noopener noreferrer">
+<img src="./Extract Odoo PoS Data using Talend - CodeWander_files/RSS_Feed_Icon38x38.png" style="border:0px solid black;max-width:100%;" title="RSS Feed" alt="CodeWander.com RSS">
+</a>
+
+
+<a href="https://flipboard.com/@codewandercom/qliksense-tricks-and-updates-2egp25s4y" target="_blank" rel="noopener noreferrer">
+<img src="./Extract Odoo PoS Data using Talend - CodeWander_files/flipboard_icon_38x38.png" style="border:0px solid black;max-width:100%;" title="CodeWander.com @Flipboard" alt="CodeWander.com Flipboard">
+</a>
+
+<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 81px; height: 28px;" title="Twitter Follow Button" src="./Extract Odoo PoS Data using Talend - CodeWander_files/follow_button.d0f13be8321eb432fba28cfc1c3351b1.en(1).html" data-screen-name="codewander"></iframe><script async="" src="./Extract Odoo PoS Data using Talend - CodeWander_files/widgets.js" charset="utf-8"></script></div></div></div>
+<div class="mh-col-1-3 mh-widget-col-1 mh-footer-3-cols  mh-footer-area mh-footer-3">
+<div id="search-3" class="mh-footer-widget widget_search"><form role="search" method="get" class="search-form" action="http://www.codewander.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form></div></div>
+</div>
+</footer>
+<div class="mh-copyright-wrap">
+	<div class="mh-container mh-container-inner mh-clearfix">
+		<p class="mh-copyright">Copyright © 2020 | WordPress Theme by <a href="https://www.mhthemes.com/" rel="nofollow">MH Themes</a></p>
+	</div>
+</div>
+</div><!-- .mh-container-outer -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_tptn_tracker = {"ajax_url":"http:\/\/www.codewander.com\/","top_ten_id":"689","top_ten_blog_id":"1","activate_counter":"11","top_ten_debug":"0","tptn_rnd":"442991637"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/top-10-tracker.min.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/sassy-social-share-public.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/fitvids.min.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/analyticsjs.js"></script>
+<script type="text/javascript" src="./Extract Odoo PoS Data using Talend - CodeWander_files/wp-embed.min.js"></script>
+
+<div class="heateor_sss_mobile_footer"></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Extract Odoo PoS Data using Talend - CodeWander_files/widget_iframe.d0f13be8321eb432fba28cfc1c3351b1.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe name="oauth2relay305632722" id="oauth2relay305632722" src="./Extract Odoo PoS Data using Talend - CodeWander_files/postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Extract Odoo PoS Data using Talend - CodeWander_files/saved_resource.html"></iframe><div style="display: block; visibility: hidden; position: absolute; width: 106px; left: -10000px; top: -10000px;"><table cellpadding="0" cellspacing="0" dir="ltr" style="width:106px;" frame="void" rules="none" class=" gc-bubbleDefault pls-container"><tbody><tr class="gc-reset"><td class="pls-topLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/border_3.gif"></td><td class="pls-topTail gc-reset"><img class="pls-tailbottom gc-reset" style="width:15px !important; height:9px !important; max-width: 15px !important; max-height: 9px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"><img class="pls-spacerbottom gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td><td class="pls-topRight gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/border_3.gif"></td></tr><tr class="gc-reset"><td class="pls-vertShimLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td><td class="pls-vertShim gc-reset"><img class="gc-reset" style="width:1px !important; height:4px !important; max-width: 1px !important; max-height: 4px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td><td class="pls-vertShimRight gc-reset"><img class="pls-dropTR gc-reset" style="width:5px !important; height:4px !important; max-width: 5px !important; max-height: 4px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-contentLeft gc-reset"><img class="pls-tailright gc-reset" style="width:9px !important; height:15px !important; max-width: 9px !important; max-height: 15px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"><img class="pls-spacerright gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td><td class="pls-contentWrap gc-reset"><div class="goog-bubble-content gc-reset"><iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="margin:0px;position:absolute;z-index:1;border-style:none;outline:none;width:100px;" tabindex="0" vspace="0" width="100%" id="I0_1586022688637" name="I0_1586022688637" src="./Extract Odoo PoS Data using Talend - CodeWander_files/subscribe_embed(1).html"></iframe></div></td><td class="pls-dropRight gc-reset"><img class="pls-tailleft gc-reset" style="width:12px !important; height:19px !important; max-width: 12px !important; max-height: 19px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"><img class="pls-spacerleft gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td></tr><tr class="gc-reset"><td class="pls-bottomLeft gc-reset"><img class="gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/border_3.gif"></td><td class="gc-reset"><table cellpadding="0" cellspacing="0" style="width:100%" class="gc-reset"><tbody><tr class="gc-reset"><td class="pls-vert gc-reset"><img class="pls-dropBL gc-reset" style="width:4px !important; height:5px !important; max-width: 4px !important; max-height: 5px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td><td class="pls-dropBottom gc-reset"><img class="pls-tailtop gc-reset" style="width:19px !important; height:13px !important; max-width: 19px !important; max-height: 13px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"><img class="pls-spacertop gc-reset" style="width:1px !important; height:1px !important; max-width: 1px !important; max-height: 1px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td></tr></tbody></table></td><td class="pls-vert gc-reset"><img class="pls-dropBR gc-reset" style="width:5px !important; height:5px !important; max-width: 5px !important; max-height: 5px !important;" src="./Extract Odoo PoS Data using Talend - CodeWander_files/spacer.gif"></td></tr></tbody></table></div></body></html>
