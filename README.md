@@ -55,3 +55,6 @@ orders.csv
 orderlines.csv
 products.csv
 As the data is ready now, we can start building dashboard in Qlik sense, Power BI or any other tool of your choice.
+
+
+http://www.codewander.com/extract-odoo-pos-data-using-talend/
